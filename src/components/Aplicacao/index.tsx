@@ -30,7 +30,12 @@ const Vaga = () => {
   return (
     <div className={styles.aplicacao}>
       <h2>Candidate-se para a vaga {vaga?.titulo}</h2>
-      <form onSubmit={() => alert('Obrigado pela candidatura!')}>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault()
+          alert('Obrigado pela candidatura!')
+        }}
+      >
         <div className={[styles.linha, styles.nomeEmail].join(' ')}>
           <input
             required
