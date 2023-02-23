@@ -13,7 +13,7 @@ type Props = {
 }
 
 const Vaga = (props: Props) => (
-  <div className={styles.vaga}>
+  <li className={styles.vaga}>
     <h3 className={styles.vagaTitulo}>{props.titulo}</h3>
     <ul>
       <li>Localizacao: {props.localizacao}</li>
@@ -27,7 +27,7 @@ const Vaga = (props: Props) => (
     <Link className={styles.vagaLink} to={`/vagas/${props.id}`}>
       Ver detalhes e candidatar-se
     </Link>
-  </div>
+  </li>
 )
 
 export default Vaga
